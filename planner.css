@@ -110,6 +110,7 @@ body::-webkit-scrollbar-thumb {
 
 
 /*MAIN CONTEXT BODY*/
+/*MAIN CONTEXT BODY*/
 .container{
     display: flex;
     align-items: center;
@@ -171,11 +172,12 @@ body::-webkit-scrollbar-thumb {
 /*Input for To-Do Task*/
 .todo-input{
     display: flex;
-    justify-content: center;
     align-items:center;
     margin-top: 30px;
 }
 #taskInput{
+    flex: 1;
+    min-width: 0;
     padding: 20px;
     color: var(--text1);
     font-size: 1.2rem;
@@ -184,19 +186,20 @@ body::-webkit-scrollbar-thumb {
     outline: none;
 }
 #taskInput:focus-within {
-  background: rgba(255, 255, 255, 0.234);
-  border: 2px solid rgba(255, 255, 255, 0.101);
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(38, 6, 6, 0.08);
-  color: var(--text1); 
-  font-weight: 500; 
+    background: rgba(255, 255, 255, 0.234);
+    border: 2px solid rgba(255, 255, 255, 0.101);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(38, 6, 6, 0.08);
+    color: var(--text1); 
+    font-weight: 500; 
 }
 #taskInput::placeholder {
-  color: var(--text1);  
-  font-weight: 500;    
-  opacity: 1;         
+    color: var(--text1);  
+    font-weight: 500;    
+    opacity: 1;         
 }
 #addBtn{
+    flex-shrink: 0;
     margin-left: 20px;
     font-size: 16px;
     width: 40px;
@@ -300,10 +303,18 @@ body::-webkit-scrollbar-thumb {
 /*====RESPONSIVE STYLE====*/
 /* Phones */
 @media (max-width: 600px) {
-
+  #taskInput {
+    font-size: 1rem;
+    padding: 14px;
+  }
+  #addBtn {
+    width: 38px;
+    height: 38px;
+  }
 }
 
 /* Tablets */
 @media (max-width: 1024px) {
   
+
 }
