@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./planner.css">
+    <title>Planr</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button id="themeToggle" aria-pressed="false" title="theme mode">🌙</button>
+    <div id="logo"><a href="./index.html" title="Planr Home-Page">Planr</a></div>
+    <div class="container">
+        <div class="note-record">
+            <h2>My Planner ✨</h2>
+            <div id="info"></div> <!--for the date and time information on the right hand side of the page-->
+            <div id="taskCounter" class="task-counter">0 / 0 completed</div>
+            <div class="todo-input">
+                <input type="text" id="taskInput" placeholder="Add a task..." />
+                <button id="addBtn" title="add task">+</button>
+            </div>
+            <ul id="taskList"><li>...</li></ul>
+        </div>
+    </div>
+    <script src="./index.js" defer></script>
+</body>
+</html>

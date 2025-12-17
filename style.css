@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+:root{
+    --bg1: #e1cab6;
+    --bg2: #F5DAA7;
+    --accent1: #4d1515;
+    --accent2: #be4c4c;
+    --text: #4d15159f;
+    --btn: #5d0b0c;
+    --btn2: #901111;
+    --glass: rgba(249, 237, 228, 0.601);
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  color: var(--accent2);
+  line-height: 1.6;
+}
+/*NAVIGATION BAR*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 4%;
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);  /* fake margin on both sides */
+  border-radius: 20px;
+  z-index: 1000;
+}
+.navbar nav a {
+  margin-left: 25px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--accent2);
+  font-weight: 500;
+}
+.navbar nav a:hover {
+    transition: color 0.3s ease;
+    color: var(--accent1);
+}
+/*LOGO STYLES*/
+.logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--accent1);
+}
+
+/*HERO SECTION*/
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+}
+.hero-text {
+    color: var(--accent1);
+    max-width: 600px;
+}
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.hero-text p {
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-bottom: 30px;
+}
+.hero-image img {
+    max-width: 420px;
+    width: 100%;
+}
+.hero-image:hover{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: scale(1.08);
+}
+
+/*BUTTON STYLING*/
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.btn-primary {
+  background: var(--btn);
+  color: #ffffff;
+}
+.btn-primary:hover {
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform: scale(1.05);
+    background: var(--btn2);
+}
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  font-weight: 900;
+  border: 2px solid #fff;
+}
+.btn-secondary:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.05);
+    background: var(--accent2);
+    border: 2px solid var(--accent2);
+    color: #fff;
+}
+
+/*FEATURES SECTION*/
+.features {
+    padding: 80px 8%;
+    text-align: center;
+}
+.features h2 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+.feature-card {
+    background: var(--btn);
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(36, 1, 1, 0.347);
+}
+.feature-card h3 {
+  color: #f9f3ee;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+.feature-card p {
+  font-size: 0.95rem;
+  color: #e8e1e1cf;
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: 70px 15%;
+  text-align: center;
+}
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.about p {
+  color: #c02727a8;
+  font-size: 1rem;
+}
+
+/* CALL TO ACTION */
+.cta {
+  background: linear-gradient(135deg, var(--btn), var(--accent1));
+  color: #fff;
+  padding: 80px 8%;
+  text-align: center;
+}
+.cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+.cta p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/*FOOTER*/
+.footer {
+  background: #381c1e;
+  color: #f6c3bc;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* =====================
+   Responsive Design
+===================== */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+  }
+
+  .navbar nav {
+    display: none;
+  }
+}
+
