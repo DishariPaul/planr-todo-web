@@ -203,7 +203,7 @@ body {
     margin: 0;
   }
   .navbar{
-    display: none;
+    display: none !important;
   }
 
   .hero {
@@ -218,6 +218,7 @@ body {
     max-width: 300px;
   }
 }
+
 
 
 
