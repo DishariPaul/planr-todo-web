@@ -202,8 +202,8 @@ body {
   body {
     margin: 0;
   }
-  .navbar nav {
-    display: none;
+  .navbar{
+    display: invisible;
   }
 
   .hero {
@@ -218,6 +218,7 @@ body {
     max-width: 300px;
   }
 }
+
 
 
 
