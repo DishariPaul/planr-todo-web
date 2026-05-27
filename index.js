@@ -132,14 +132,14 @@ function updateTaskCounter() {
         if (theme === 'dark') {
           root.setAttribute('data-theme', 'dark');
           if (toggle) { 
-            toggle.textContent = '☀️'; 
+            toggle.textContent = '🌙'; 
             toggle.setAttribute('aria-pressed', 'true'); 
           }
         } 
         else {
           root.removeAttribute('data-theme');
           if (toggle) { 
-            toggle.textContent = '🌙'; 
+            toggle.textContent = '☀️'; 
             toggle.setAttribute('aria-pressed', 'false'); 
           }
         }
